@@ -1,10 +1,13 @@
-var swiper = new Swiper(".mySwiper", {
-	pagination: {
-		el: ".swiper-pagination",
-		type: "progressbar",
+const swiper = new Swiper('.mySwiper', {
+	direction: 'vertical',
+	slidesPerView: 1,
+	spaceBetween: 0,
+	mousewheel: true,
+	keyboard: {
+		enabled: true,
 	},
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'progressbar',
 	},
 })

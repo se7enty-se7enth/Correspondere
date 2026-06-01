@@ -7,40 +7,55 @@
 
 html,
 body {
-	position: relative;
-	height: 100%;
-}
-
-body {
-	background: #000;
-	font-family:
-		Helvetica Neue,
-		Helvetica,
-		Arial,
-		sans-serif;
-	font-size: 14px;
-	color: #fff;
 	margin: 0;
 	padding: 0;
-}
-
-.swiper {
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
+	background-color: #ffffff;
 }
 
-.swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #444;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.swiper-slide img {
-	display: block;
+.mySwiper {
 	width: 100%;
-	height: 100%;
-	object-fit: cover;
+	height: 100dvh;
+	position: relative;
+
+	.swiper-slide {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		box-sizing: border-box;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 24px;
+
+		@include m.down(md) {
+			flex-direction: row;
+			padding: 60px;
+		}
+	}
+	--swiper-navigation-size: 0;
+
+	.swiper-pagination-progressbar {
+		background: rgba(102, 102, 102, 0.4);
+
+		.swiper-pagination-progressbar-fill {
+			background: #1d1d1b;
+		}
+	}
+
+	&.swiper-initialized[orientation='vertical'] {
+		.swiper-pagination-progressbar {
+			width: 2px;
+			height: 100%;
+			top: 0;
+			left: auto;
+			right: 10px;
+
+			@media (min-width: 768px) {
+				right: 25px;
+			}
+		}
+	}
 }
