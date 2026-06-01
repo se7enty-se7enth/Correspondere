@@ -27,12 +27,13 @@ body {
 		box-sizing: border-box;
 		align-items: center;
 		justify-content: center;
-		flex-direction: column;
-		padding: 24px;
+
+		flex-direction: row;
+		padding: 60px;
 
 		@include m.down(md) {
-			flex-direction: row;
-			padding: 60px;
+			flex-direction: column;
+			padding: 24px;
 		}
 	}
 	--swiper-navigation-size: 0;
@@ -45,16 +46,22 @@ body {
 		}
 	}
 
-	&.swiper-initialized[orientation='vertical'] {
-		.swiper-pagination-progressbar {
+	.swiper-pagination-progressbar {
+		background: rgba(102, 102, 102, 0.4);
+
+		.swiper-pagination-progressbar-fill {
+			background: #1d1d1b;
+		}
+
+		&.swiper-pagination-vertical {
 			width: 2px;
 			height: 100%;
 			top: 0;
 			left: auto;
-			right: 10px;
+			right: 5px;
 
 			@media (min-width: 768px) {
-				right: 25px;
+				right: 15px;
 			}
 		}
 	}
