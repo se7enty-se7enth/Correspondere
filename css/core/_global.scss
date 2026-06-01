@@ -1,0 +1,33 @@
+@use '../core/variables' as v;
+@use '../core/mixins' as m;
+
+*::selection {
+	background: rgb(157, 222, 255);
+	color: var(--color-dark);
+}
+
+body {
+	font-family: var(--main-font);
+	color: var(--color-dark);
+}
+
+a {
+	color: var(--color-light);
+	opacity: 0.9;
+	transition-duration: v.$transition-duration;
+
+	@include m.hover {
+		opacity: 1;
+	}
+}
+
+button,
+a,
+img {
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+img {
+	-webkit-user-drag: none;
+}
