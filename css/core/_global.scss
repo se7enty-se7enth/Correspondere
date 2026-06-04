@@ -31,3 +31,14 @@ img {
 img {
 	-webkit-user-drag: none;
 }
+
+.title {
+	font-size: 2rem;
+	color: var(--color-dark);
+	margin-bottom: 20px;
+}
+
+.current-page {
+	font-size: 1.5rem;
+	color: var(--color-dark);
+}
