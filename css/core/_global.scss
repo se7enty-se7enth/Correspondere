@@ -9,6 +9,7 @@
 body {
 	font-family: var(--main-font);
 	color: var(--color-dark);
+	font-weight: 100;
 }
 
 a {
@@ -34,11 +35,15 @@ img {
 
 .title {
 	font-size: 2rem;
-	color: var(--color-dark);
 	margin-bottom: 20px;
+	font-weight: 200;
 }
 
 .current-page {
 	font-size: 1.5rem;
-	color: var(--color-dark);
+	font-weight: 200;
+}
+
+.justify {
+	text-align: justify;
 }
